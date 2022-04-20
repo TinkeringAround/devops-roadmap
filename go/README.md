@@ -1,8 +1,15 @@
 # GoLang
 
-Everything go related...
+Go is an open source programming language supported by Google.
+- Easy to learn and get started with
+- Built-in concurrency and a robust standard library
+- Growing ecosystem of partners, communities, and tools
 
-## Subprojects
+## Prerequisites
+
+- [GoLang](https://go.dev/doc/install)
+
+## Content
 
 | Type       | Name        |
 |------------|-------------|
@@ -23,7 +30,8 @@ Everything go related...
 - Readers (Read Interface)
 - Rot13Reader (Read Interface)
 
-## Resources for Learning
+## Learning
 
 - https://gobyexample.com/
 - https://go.dev/tour/welcome/1
+- https://quii.gitbook.io/learn-go-with-tests/

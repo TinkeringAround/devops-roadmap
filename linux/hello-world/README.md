@@ -1,0 +1,27 @@
+# Hello World
+
+Starting an Ubuntu Docker Container which then runs in the background.
+
+````shell
+vagrant up
+````
+
+Start Bash in the Ubuntu Container for the `default` vm.
+`default` cannot easily be changed as naming.
+
+````shell
+vagrant docker-exec -it default -- /bin/sh
+````
+
+Stopping and destroying a vm.
+
+````shell
+vagrant halt
+vagrant destroy
+````
+
+Reload deployment on config changes.
+
+````shell
+vagrant reload
+````

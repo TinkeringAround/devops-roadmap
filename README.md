@@ -6,7 +6,7 @@ My Roadmap to becoming a DevOps Engineer!
 
 - [✔️] What is/why do we use DevOps
 - [Learning a Programming Language (GO)](go/README.md)
-- Linux Basics
+- [Linux Basics](linux/README.md)
 - Networking
 - Cloud Providers
 - Containers
