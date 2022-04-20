@@ -10,7 +10,7 @@ while getopts 'cs:' flag; do
 done
 
 case ${command} in
-run) go run *.go ;;
+run) go run . ;;
 build) goscript build ;;
 install) go install ;;
 *) go run one.go ;;

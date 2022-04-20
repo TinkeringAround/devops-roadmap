@@ -13,6 +13,9 @@ func main() {
 	loops()
 	fmt.Println("Sum Function call:", sum(1, 2))
 	returnTypes()
+	receivers()
+	typeAssertions()
+	typeSwitches()
 }
 
 func intro() {
@@ -152,4 +155,58 @@ func pointers() {
 
 func inc(value *int) {
 	*value++
+}
+
+type Square struct {
+	Width, Height int
+}
+
+func (s Square) Area() int {
+	return s.Height * s.Width
+}
+
+func (s *Square) Scale(k int) {
+	s.Width *= k
+	s.Height *= k
+}
+
+func receivers() {
+	square := Square{Width: 2, Height: 5}
+	fmt.Println("Receiver test on square:", square)
+	fmt.Println("Receiver usage to calc square area:", square.Area())
+	square.Scale(2)
+	fmt.Println("Receiver usage to calc square area after scaling Height and Width by 2:", square.Area())
+}
+
+func typeAssertions() {
+	var i interface{} = 20
+
+	s := i.(int)
+	fmt.Println("Type Assertions that s is an int:", s)
+
+	s, ok := i.(int)
+	fmt.Println("Type Assertions that s is an int with ok:", s, ok)
+
+	f, ok := i.(float64)
+	fmt.Println("Type Assertions that s is a float with ok:", f, ok)
+
+	fmt.Println("Type Assertions that s is a float without ok will panic:")
+	// f = i.(float64) -> will panic
+}
+
+func typeSwitches() {
+	elaborateType := func(i interface{}) {
+		switch v := i.(type) {
+		case int:
+			fmt.Println("Type Switch case int")
+		case string:
+			fmt.Println("Type Switch case string")
+		default:
+			fmt.Println("Type Switch case default:", v)
+		}
+	}
+
+	elaborateType(10)      // int
+	elaborateType("Hello") // string
+	elaborateType(64.0)    // float64
 }

@@ -26,9 +26,5 @@ func GetJokes(amount int) (jokes []Joke, err error) {
 
 	// Converting Body to Array of Joke Struct
 	err = json.Unmarshal(body, &jokes)
-	if err != nil {
-		return
-	}
-
 	return
 }
