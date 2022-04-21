@@ -6,6 +6,13 @@ Linux Basics including HashiCorp Vagrant to quickly run configurable distributio
 
 - [Vagrant](https://www.vagrantup.com/downloads)
 
+## Content
+
+| Type       | Name                          | Description                          |
+|------------|-------------------------------|--------------------------------------|
+| Project    | [Ubuntu](ubuntu/README.md)    | Start a Ubuntu in Docker via Vagrant |
+| Collection | [Command](commands/README.md) | Collection of common Linux commands  |
+
 ## Learning
 
 - [HashiCorp Introduction](https://learn.hashicorp.com/tutorials/vagrant/getting-started-index?in=vagrant/getting-started)

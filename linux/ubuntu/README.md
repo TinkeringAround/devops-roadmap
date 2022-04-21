@@ -10,7 +10,7 @@ Start Bash in the Ubuntu Container for the `default` vm.
 `default` cannot easily be changed as naming.
 
 ````shell
-vagrant docker-exec -it default -- /bin/sh
+vagrant docker-exec -it default -- /bin/bash
 ````
 
 Stopping and destroying a vm.
@@ -25,3 +25,7 @@ Reload deployment on config changes.
 ````shell
 vagrant reload
 ````
+
+## Further Reading
+
+- [Vagrant Docker Provider](https://www.vagrantup.com/docs/providers/docker)
