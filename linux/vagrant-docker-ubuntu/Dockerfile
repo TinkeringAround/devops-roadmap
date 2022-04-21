@@ -1,4 +1,5 @@
 FROM ubuntu:22.04
 RUN apt-get update
 RUN apt-get install
-RUN apt install mlocate
+RUN apt install locate
+RUN apt install vim

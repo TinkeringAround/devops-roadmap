@@ -8,10 +8,12 @@ Linux Basics including HashiCorp Vagrant to quickly run configurable distributio
 
 ## Content
 
-| Type       | Name                          | Description                          |
-|------------|-------------------------------|--------------------------------------|
-| Project    | [Ubuntu](ubuntu/README.md)    | Start a Ubuntu in Docker via Vagrant |
-| Collection | [Command](commands/README.md) | Collection of common Linux commands  |
+| Type       | Name                                                     | Description                                                |
+|------------|----------------------------------------------------------|------------------------------------------------------------|
+| Project    | [Vagrant+Docker+Ubuntu](vagrant-docker-ubuntu/README.md) | Start a Ubuntu in Docker via Vagrant                       |
+| Collection | [Commands](commands/README.md)                           | Collection of common Linux commands, pipes, shortcuts...   |
+| Collection | [Filesystem + Storage](file-system/README.md)            | Collection of linux filesystem paths and storage types     |
+| Collection | [VIM](vim/README.md)                                     | Basic collection of how to work with the text editor `vim` |
 
 ## Learning
 

@@ -1,6 +1,6 @@
-# Linux Commands
+# Commands
 
-A collection of common linux commands.
+A collection of common linux commands, pipes, shortcuts...
 
 ## Semantics
 
@@ -14,12 +14,14 @@ A collection of common linux commands.
 - `{user}` Name of a user
 - `{group}` Name of a group
 - `{permission}` [Permission code](#Permissions) like `777`
+- `{package}` Package name
 
 ## Commands
 
+### File/Directory Management
+
 | Command                                | Description                                                                                             |
 |----------------------------------------|---------------------------------------------------------------------------------------------------------|
-| `clear`                                | Clear console                                                                                           |
 | `pwd`                                  | Print current working directory                                                                         |
 | `ls (-al) ({dir/file})`                | List content of current working directory or file (`-al` = with Permissions)                            |
 | `cd {dir}`                             | Change to a directory                                                                                   |
@@ -35,8 +37,11 @@ A collection of common linux commands.
 | `echo "{content}" >> {file}`           | Append text to a file not overwriting existing content                                                  |
 | `cat {file}`                           | Read files content                                                                                      |
 | `cat {file}` &#124; `grep "{content}"` | Search text inside a file                                                                               |
-| `history (-c)`                         | Show history of commands used (`-c` = clear history)                                                    |
-| `history` &#124; `grep "content"`      | Search for a command in the history                                                                     |
+
+### Administration
+
+| Command                                | Description                                                                                             |
+|----------------------------------------|---------------------------------------------------------------------------------------------------------|
 | `printenv`                             | Print environment variables                                                                             |
 | `passwd`                               | Changing the current user password                                                                      |
 | `useradd {user}`                       | Creating a new user                                                                                     |
@@ -46,6 +51,23 @@ A collection of common linux commands.
 | `chmod {permission} {file/dir}`        | Change [permission](#Permissions) for a file/directory                                                  |
 | `chown {user} {file/dir} (-R)`         | Change Ownership of file/dir (`-R` = Recursively)                                                       |
 | `cut -d: -f1 < /etc/passwd`            | List all user accounts                                                                                  |
+| `apt install {package}`                | Install a package                                                                                       |
+| `apt remove {package}`                 | Remove a package                                                                                        |
+
+### Filesystem + Storage
+
+| Command   | Description                                          |
+|-----------|------------------------------------------------------|
+| `lsblk`   | List block devices                                   |
+| `df (-h)` | Information about partitions (`-h` = Human readable) |
+
+### Utilities
+
+| Command                                | Description                                                                                             |
+|----------------------------------------|---------------------------------------------------------------------------------------------------------|
+| `clear`                                | Clear console                                                                                           |
+| `history (-c)`                         | Show history of commands used (`-c` = clear history)                                                    |
+| `history` &#124; `grep "content"`      | Search for a command in the history                                                                     |
 
 ## Permissions
 

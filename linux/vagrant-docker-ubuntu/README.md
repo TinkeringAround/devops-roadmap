@@ -1,4 +1,4 @@
-# Hello World
+# Vagrant + Docker + Ubuntu
 
 Starting an Ubuntu Docker Container which then runs in the background.
 
