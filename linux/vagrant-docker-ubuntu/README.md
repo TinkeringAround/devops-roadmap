@@ -29,3 +29,4 @@ vagrant reload
 ## Further Reading
 
 - [Vagrant Docker Provider](https://www.vagrantup.com/docs/providers/docker)
+- [Ubuntu in Docker with SSH](https://dev.to/s1ntaxe770r/how-to-setup-ssh-within-a-docker-container-i5i)
