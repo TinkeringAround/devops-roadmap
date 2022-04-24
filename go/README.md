@@ -44,6 +44,8 @@ Learn Go by applying TDD. The collection of test cases consists of:
 - Arras and Slices
 - Structs, Methods and Interfaces
 - Pointers & Errors
+- Maps
+- Dependency Injection
 
 #### Testing Commands
 
