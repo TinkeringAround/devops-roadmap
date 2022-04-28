@@ -46,6 +46,7 @@ Learn Go by applying TDD. The collection of test cases consists of:
 - Pointers & Errors
 - Maps
 - Dependency Injection
+- Mocking (in Progress)
 
 #### Testing Commands
 

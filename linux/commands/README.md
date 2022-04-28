@@ -40,19 +40,20 @@ A collection of common linux commands, pipes, shortcuts...
 
 ### Administration
 
-| Command                                | Description                                                                                             |
-|----------------------------------------|---------------------------------------------------------------------------------------------------------|
-| `printenv`                             | Print environment variables                                                                             |
-| `passwd`                               | Changing the current user password                                                                      |
-| `useradd {user}`                       | Creating a new user                                                                                     |
-| `groupadd {group}`                     | Creating a group                                                                                        |
-| `usermod {user} -a -G {group}`         | Adding `-a` a user to a group `-G`                                                                      |
-| `usermod -a -G sudo {user}`            | Add `-a` a user to the `sudo` group `-G`                                                                |
-| `chmod {permission} {file/dir}`        | Change [permission](#Permissions) for a file/directory                                                  |
-| `chown {user} {file/dir} (-R)`         | Change Ownership of file/dir (`-R` = Recursively)                                                       |
-| `cut -d: -f1 < /etc/passwd`            | List all user accounts                                                                                  |
-| `apt install {package}`                | Install a package                                                                                       |
-| `apt remove {package}`                 | Remove a package                                                                                        |
+| Command                          | Description                                                |
+|----------------------------------|------------------------------------------------------------|
+| `printenv`                       | Print environment variables                                |
+| `passwd`                         | Changing the current user password                         |
+| `useradd {user}`                 | Creating a new user                                        |
+| `userdel {user}`                 | Delete a user                                              |
+| `groupadd {group}`               | Creating a group                                           |
+| `usermod {user} -a -G {group}`   | Adding `-a` a user to a group `-G`                         |
+| `usermod -a -G sudo {user}`      | Add `-a` a user to the `sudo` group `-G`                   |
+| `chmod {permission} {file/dir}`  | Change [permission](#Permissions) for a file/directory     |
+| `chown {user} {file/dir} (-R)`   | Change Ownership of file/dir (`-R` = Recursively)          |
+| `cut -d: -f1 < /etc/passwd`      | List all user accounts                                     |
+| `apt install {package}`          | Install a package                                          |
+| `apt remove {package}`           | Remove a package                                           |
 
 ### Filesystem + Storage
 
@@ -63,11 +64,12 @@ A collection of common linux commands, pipes, shortcuts...
 
 ### Utilities
 
-| Command                                | Description                                                                                             |
-|----------------------------------------|---------------------------------------------------------------------------------------------------------|
-| `clear`                                | Clear console                                                                                           |
-| `history (-c)`                         | Show history of commands used (`-c` = clear history)                                                    |
-| `history` &#124; `grep "content"`      | Search for a command in the history                                                                     |
+| Command                           | Description                                          |
+|-----------------------------------|------------------------------------------------------|
+| `clear`                           | Clear console                                        |
+| `history (-c)`                    | Show history of commands used (`-c` = clear history) |
+| `history` &#124; `grep "content"` | Search for a command in the history                  |
+| `which $SHELL`                    | Print the current used shell                         |
 
 ## Permissions
 

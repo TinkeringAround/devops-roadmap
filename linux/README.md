@@ -14,6 +14,7 @@ Linux Basics including HashiCorp Vagrant to quickly run configurable distributio
 | Collection | [Commands](commands/README.md)                           | Collection of common Linux commands, pipes, shortcuts...   |
 | Collection | [Filesystem + Storage](file-system/README.md)            | Collection of linux filesystem paths and storage types     |
 | Collection | [VIM](vim/README.md)                                     | Basic collection of how to work with the text editor `vim` |
+| Collection | [Bash](bash/README.md)                                   | Bash Basics with little examples and collection            |
 
 ## Learning
 
