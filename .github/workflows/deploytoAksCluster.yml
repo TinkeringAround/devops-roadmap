@@ -1,0 +1,50 @@
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - uses: azure/docker-login@v1
+      with:
+        login-server: kdiwd4registry.azurecr.io
+        username: ${{ secrets.acr_kdiwd4registry_username }}
+        password: ${{ secrets.acr_kdiwd4registry_password }}
+    
+    - name: Build and push image to ACR
+      id: build-image
+      run: |
+        docker build "$GITHUB_WORKSPACE/containers/node-webserver" -f  "containers/node-webserver/Dockerfile" -t kdiwd4registry.azurecr.io/kdiwd4cluster:${{ github.sha }} --label dockerfile-path=containers/node-webserver/Dockerfile
+        docker push kdiwd4registry.azurecr.io/kdiwd4cluster:${{ github.sha }}
+    
+    - uses: azure/k8s-set-context@v1
+      with:
+         kubeconfig: ${{ secrets.aks_kdiwd4cluster_kubeConfig }}
+      id: login
+    
+    - name: Create namespace
+      run: |
+        namespacePresent=`kubectl get namespace | grep default | wc -l`
+        if [ $namespacePresent -eq 0 ]
+        then
+            echo `kubectl create namespace default`
+        fi
+
+    - uses: azure/k8s-create-secret@v1
+      with:
+        namespace: default
+        container-registry-url: kdiwd4registry.azurecr.io
+        container-registry-username: ${{ secrets.acr_kdiwd4registry_username }}
+        container-registry-password: ${{ secrets.acr_kdiwd4registry_password }}
+        secret-name: kdiwd4clustedockerauth
+       
+    - uses: azure/k8s-deploy@v1.2
+      with:
+        namespace: default
+        manifests: |
+          manifests/deployment.yml
+          manifests/service.yml
+        images: |
+          kdiwd4registry.azurecr.io/kdiwd4cluster:${{ github.sha }}
+        imagepullsecrets: |
+          kdiwd4clustedockerauth
