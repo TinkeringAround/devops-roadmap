@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kdiwd4cluster-ff3b"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kdiwd4cluster-ff3b"
+  template:
+    metadata:
+      labels:
+        app: "kdiwd4cluster-ff3b"
+    spec:
+      containers:
+        - name: "kdiwd4cluster-ff3b"
+          image: "kdiwd4registry.azurecr.io/kdiwd4cluster"
+          ports:
+          - containerPort: 3030
